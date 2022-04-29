@@ -1,0 +1,305 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: whitesmoke;
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+#root{
+    height: 100%;
+}
+#head{
+    overflow: hidden;
+    height: 25%;
+    background-image: url("universo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+#menu{
+    overflow: hidden;
+    height: 5%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+#head h1{
+    font-size: 3vw;
+    color: red;
+    padding-top: 5%;
+}
+#container{
+    width: 85%;
+    margin: 0 auto;
+    color: cadetblue;
+    background-color: aquamarine;
+    height: fit-content;
+}
+#options0,#options1,#options2,#options3{
+    padding-top: 0.6%;
+    font-size: 1.6vw;
+    cursor: pointer;
+    float: left;
+    width: 25%;
+    background-color: blue;
+    height: 100%;
+    text-align: center;
+}
+#options0:hover, #options1:hover, #options2:hover, #options3:hover{
+    background-color: green;
+}
+#up{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    bottom: 2%;
+    left: 94%;
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+    background-color: black;
+    border-radius: 50%;
+}
+#up:hover{
+    background-color: grey;
+}
+#home{
+    position: fixed;
+    z-index: 99;
+    bottom: 2%;
+    left: 1%;
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+}
+#content1 {
+    padding: 1% 1%;
+    min-width: 98%;
+    max-width: 98%;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+#content2 {
+    width: auto;  
+    height: 60%;
+    background-color: blueviolet;
+    border-style: groove;
+    color: black;
+    font-size: 1.3vw;
+    overflow: hidden;
+}
+#content2 ul{
+    display: flex;      
+    padding: 0;          
+    margin: 0;
+    flex-flow: column nowrap;
+    align-items: center;                  
+}
+#content2 li{
+    padding-bottom: 1em;
+    display: table-cell; 
+}
+#universe{
+   float: right;   
+   max-height: 100%;
+   width: 30%;
+}
+#content1 p{
+    width: 65%;
+    font-size: 1.3vw;
+    float: left;
+    padding-top: 5%;
+    padding-left: 3%;
+    text-align: justify;
+    color: grey;
+}
+#imgRullete{
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3%;
+}
+#rullete0 {
+    z-index: 99;
+    width: 3%;
+    max-width: 3%; 
+    float: right;
+    top: 50%;
+    right: 1%;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: grey;
+    opacity: 0.5;
+    position: absolute;
+}
+#rullete1 {   
+    z-index: 99;
+    background-color: grey;
+    opacity: 0.5;
+    width: 3%;
+    max-width: 3%;
+    float: left;
+    top: 50%;
+    left: 1%;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+#rullete0:hover, #rullete1:hover {
+    opacity: 1;
+    background-color: blue;
+}
+.imgs {
+    transition: all 1s ease;
+    height: 100%;
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.imgs img{
+    height: 100%;
+    width: calc(100%/3);
+    object-fit: cover;
+}
+#solarSystem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 38vw;
+}
+#solarSystem span{
+    position: absolute;
+}
+#solarSystem span:before{
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50px*var(--i));
+}
+#solarSystem span:nth-child(5n+1):before{
+    content: "Sun";
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 40px rgba(255, 214, 0, 1),
+                0 0 50px rgba(255, 214, 0, 1),
+                0 0 100px rgba(255, 214, 0, 1),
+                0 0 150px rgba(255, 214, 0, 1),
+                0 0 0 200px rgba(255, 214, 0, .2);
+}
+#solarSystem span:nth-child(5n+2):before{
+    content: "Mercury";
+    width: 6px;
+    height: 6px;
+    background: rgba(243, 31, 31, 1);   
+}
+#solarSystem span:nth-child(5n+3):before{
+    content: "Venus";
+    width: 13px;
+    height: 13px;
+    background: rgba(97, 47, 1, 1);   
+}
+#solarSystem span:nth-child(5n+4):before{
+    content: "Earth";
+    width: 16px;
+    height: 16px;
+    background: rgba(43, 243, 25, 1);   
+}
+#solarSystem span:nth-child(5n+5):before{
+    content: "Mars";
+    width: 13px;
+    height: 13px;
+    background: rgba(201, 60, 60, 1);   
+}
+#solarSystem span:nth-child(5n+4){
+    animation: rotation1 6s linear normal infinite;
+}
+#solarSystem span:nth-child(5n+3){
+    animation: rotation1 5s linear normal infinite;
+}
+#solarSystem span:nth-child(5n+2){
+    animation: rotation1 3s linear normal infinite;
+}
+#solarSystem span:nth-child(5n+5){
+    animation: rotation1 7s linear normal infinite;
+}
+@keyframes rotation1{
+    0%{ transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#contentBH {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+#contentBH p{
+    font-size: 1.5vw;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+#contentBH img{
+    margin-top: 1%;
+    border-style: dashed solid;
+    max-width: 45%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#content1_stars p{
+    font-size: 1.5vw;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: justify;
+    padding: 1%;
+    color: blueviolet;
+}
+#iframeStar{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 99%;
+    height: 50vw;
+    margin-bottom: 1%;
+}
+#imgStarContainer{
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+}
+#earth{
+    width: 10%;
+    height: 10%;
+}
+#contentPlanet p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+#earthThePlanet{
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+    display: block;
+}
+#contentSolarSystem p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 1%;
+}
+#contentSolarSystem img{
+    width: 100%;
+}
+@media screen and (max-width: 600px){
+    /*to do*/
+}
